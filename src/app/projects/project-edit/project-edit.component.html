@@ -1,0 +1,50 @@
+<form [formGroup]="projectForm">
+    <div class="field">
+        <label for="projectName">Project Name:</label>
+        <div>
+            <input type="text" pInputText formControlName="projectName" id="projectName" [style]="{width: '600px'}">
+        </div>
+
+        <div *ngIf="projectForm.controls['projectName'].invalid && projectForm.controls['projectName'].touched">
+            <small id="username-help" class="p-error">Project Name is required.</small>
+        </div>
+    </div>
+
+    <div class="field">
+        <label for="clientName"> Client Name: </label>
+        <div>
+            <input type="text" pInputText formControlName="clientName" id="clientName" [style]="{width: '600px'}">
+        </div>
+
+        <div *ngIf="projectForm.controls['clientName'].invalid && projectForm.controls['clientName'].touched">
+            <small id="username-help" class="p-error">Client Name is required.</small>
+        </div>
+    </div>
+
+    <div class="field">
+        <label for="duration">Duration: </label>
+        <div>
+            <input type="text" pInputText name="duration" id="duration" formControlName="duration" [style]="{width: '600px'}">
+        </div>
+
+        <div *ngIf="projectForm.controls['duration'].invalid && projectForm.controls['duration'].touched">
+            <small id="username-help" class="p-error">Duration is required.</small>
+        </div>
+    </div>
+
+    <div class="field" >
+        <label for="initiationDate">Initiation Date: </label>
+        <div class="row">
+            <p-calendar contentStyle="{'overflow': 'visible'}" formControlName="initiationDate" id="initiationDate" [style]="{width: '600px'}"></p-calendar>
+        </div>
+
+        <div *ngIf="projectForm.controls['initiationDate'].invalid && projectForm.controls['initiationDate'].touched">
+            <small id="username-help" class="p-error">Initiation Date is required.</small>
+        </div>
+    </div>
+
+    <br>
+
+        <p-button label="{{selectedProject ? 'Save' : 'Add'}}" styleClass="{{selectedProject ? 'p-button-success' : ''}}" [disabled]="projectForm.invalid" (click)="addUpdateProject()"></p-button>
+    
+</form>

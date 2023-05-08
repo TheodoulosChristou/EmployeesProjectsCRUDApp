@@ -1,0 +1,27 @@
+<h3 id="projectAssignmentTable">Project Assignment Table</h3>
+<div class="card">
+    <p-table [value]="projects" [tableStyle]="{ 'min-width' : '50rem'}" [paginator]="true"
+    [rows]="4">
+        <ng-template pTemplate="header">
+            <tr>
+                <th>ID</th>
+                <th>Project Name</th>
+                <th>Duration</th>
+                <th>Initiation Date</th>
+                <th>Assign Users</th>
+            </tr>
+        </ng-template>
+
+        <ng-template pTemplate="body" let-project>
+            <tr>
+                <td>{{project.id}}</td>
+                <td>{{project.projectName}}</td>
+                <td>{{project.duration}}</td>
+                <td>{{project.initiationDate | date}}</td>
+                <td>
+                    <p-button icon="pi pi-arrow-right" [routerLink]="['/employee-pick-list']"></p-button>
+                </td>
+            </tr>
+        </ng-template>
+    </p-table>
+</div>

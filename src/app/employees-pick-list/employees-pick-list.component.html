@@ -1,0 +1,21 @@
+<div class="card">
+    <p-pickList [source]="sourceEmployees" [target]="targetEmployees" sourceHeader="Available" targetHeader="Selected" [dragdrop]="true" [responsive]="true" [sourceStyle]="{ height: '30rem' }"
+        [targetStyle]="{ height: '30rem' }" filterBy="name" sourceFilterPlaceholder="Search by name" targetFilterPlaceholder="Search by name" breakpoint="1400px">
+        <ng-template let-employee pTemplate="item">
+            <div class="flex flex-wrap p-2 align-items-center gap-3">
+                <div class="flex-1 flex flex-column gap-2">
+                    ID: <span>{{employee.id}}</span>
+                    <br>
+                    Fullname: <span class="font-bold">{{ employee.name }}   </span><span>{{ employee.surname }}</span>
+                    <br>
+                    Phone Number: <span>{{employee.phoneNumber}}</span>
+                    <div class="flex align-products-center gap-2">
+                        Date of Birth: <span>{{employee.dateOfBirth | date}}</span>
+                        
+                    </div>
+                    Position: <span> {{employee.position}}</span>
+                </div>
+            </div>
+        </ng-template>
+    </p-pickList>
+</div>

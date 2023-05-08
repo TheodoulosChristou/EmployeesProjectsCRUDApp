@@ -1,0 +1,72 @@
+<!-- Title of the employees Table-->
+<div class="headerDivision">
+    <h3 id="employeeTableTitle">Employees Table</h3> 
+</div>
+
+
+<!-- Displays the confirmation toast message that the employee deleted-->
+<div *ngIf="deleteMessage">
+    <p-messages [(value)]="deleteEmployeeMessage" [enableService]="false"></p-messages>
+</div>
+
+<!-- Displays the confirmation toast message that the employee added-->
+<div *ngIf="addEmployeeBoolean">
+    <p-messages [(value)]="addEmployeeMessage" [enableService]="false" style="width: 80px;"></p-messages>
+</div>
+
+<!-- Displays the confirmation toast message that the employee updated-->
+<div *ngIf="editEmployeeBoolean">
+    <p-messages [(value)]="editEmployeeMessage" [enableService]="false"></p-messages>
+</div>
+
+<!-- Displays an error toast message if user failed to Create/Update/Read/Delete employees-->
+<div *ngIf="errorMessageBoolean">
+    <p-messages [(value)]="errorEmployeeMessage" [enableService]="false"></p-messages>
+</div>
+
+
+<p-table [value]="employees" [tableStyle]="{ 'min-width': '50rem' }" [paginator]="true" 
+[rows]="4" 
+[columns]="employees">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Surname</th>
+            <th>Date Of Birth</th>
+            <th>Phone Number</th>
+            <th>Position</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-employee>
+        <tr>
+            <td>{{employee.id}}</td>
+            <td>{{employee.name}}</td>
+            <td>{{employee.surname}}</td>
+            <td>{{employee.dateOfBirth | date}}</td>
+            <td>{{employee.phoneNumber}}</td>
+            <td>{{employee.position}}</td>
+            <td>
+                <p-button 
+                    label="Edit" 
+                    styleClass="p-button-warning"
+                    (click)="showEditModal(employee)">
+                </p-button>
+            </td>
+
+            <td>
+                <p-toast></p-toast>
+                <p-confirmDialog [style]="{width: '50vw'}"></p-confirmDialog>
+                <p-button (click)="deleteEmployee(employee.id)" label="Delete" styleClass="p-button-danger"></p-button>
+            </td>
+            </tr>
+    </ng-template>
+</p-table>
+
+
+<p-button (click)="showDialog()" label="Add Employee"></p-button>
+<p-dialog  header="Employee Form" [(visible)]="visible" [style]="{width: '60vw', height:'60vw'}">
+    <app-employee-edit (employeeList) = "fetchEmployees()" (clickClose)="hideModal($event)" [selectedEmployee]="selectedEmployee" (addEmployeeBoolean)="messageForAddEmployee($event)" (editEmployeeBoolean)="messageForEditMessage($event)" (errorMessageBoolean)="errorMessage($event)"></app-employee-edit>
+</p-dialog>

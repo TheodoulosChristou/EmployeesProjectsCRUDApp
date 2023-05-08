@@ -1,0 +1,76 @@
+<form [formGroup]="employeeForm">
+    <div class="field">
+        <label for="name"> Name: </label>
+        <div>
+            <input type="text" pInputText formControlName="name" id="name" [style]="{width: '600px'}">
+        </div>
+
+        <div *ngIf="employeeForm.controls['name'].invalid && employeeForm.controls['name'].touched" class="field p-fluid mt-4">
+            <small id="username-help" class="p-error">Name Field is required.</small>
+         </div>
+    </div>
+
+   
+
+    <div class="field">
+        <label for="surname"> Surname: </label>
+        <div>
+            <input type="text" pInputText formControlName="surname" [style]="{width: '600px'}">
+        </div>
+        
+
+        <div *ngIf="employeeForm.controls['surname'].invalid && employeeForm.controls['surname'].touched" class="field p-fluid mt-4">
+            <small id="username-help" class="p-error">Surname Field is required.</small>
+         </div>
+    </div>
+
+    <div class="field">
+        <label for="dateOfBirth"> Date Of Birth: </label>
+        <div class="row">
+            <p-calendar contentStyle="{'overflow': 'visible'}" formControlName="dateOfBirth" id="dateOfBirth" [style]="{width: '600px'}"></p-calendar>
+        </div>
+        
+
+        <div *ngIf="employeeForm.controls['dateOfBirth'].invalid && employeeForm.controls['dateOfBirth'].touched" class="field p-fluid mt-4">
+            <small id="username-help" class="p-error">Date Of birth Field is required.</small>
+         </div>
+    </div>
+
+    <div class="field">
+        <label for="phoneNumber">Phone Number:  </label>
+        <div>
+            <input formControlName="phoneNumber" pInputText [style]="{width: '600px'}">
+        </div>
+        
+
+        <div *ngIf="employeeForm.controls['phoneNumber'].invalid && employeeForm.controls['phoneNumber'].touched" class="field p-fluid mt-4">
+            
+            <div *ngIf="employeeForm.controls['phoneNumber'].hasError('required')">
+                <small class="p-error">PhoneNumber Field is required.</small>
+            </div>    
+
+            <div *ngIf="employeeForm.controls['phoneNumber'].hasError('containsNumber')">
+                <small class="p-error">Phone number should contain numbers</small>
+             </div>
+         </div>
+
+        
+    </div>
+
+    <div class="field">
+        <label for="position">Position:  </label>
+        
+        <div>
+            <input formControlName="position" pInputText id="positionElement" [style]="{width: '600px'}">
+        </div>
+        
+
+        <div *ngIf="employeeForm.controls['position'].invalid && employeeForm.controls['position'].touched" class="field p-fluid mt-4">
+            <small id="username-help" class="p-error">Position Field is required.</small>
+         </div>
+    </div>
+
+    <div>
+        <p-button label="{{selectedEmployee ? 'Save' : 'Add'}}" (click)="addUpdateEmployee()" [disabled]="employeeForm.invalid" styleClass="{{selectedEmployee ? 'p-button-success' : ''}}"></p-button>
+    </div>    
+</form>
