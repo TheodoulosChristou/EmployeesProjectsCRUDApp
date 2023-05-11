@@ -1,4 +1,4 @@
-# Employees and Projects CRUD Application with ASP.NET Core 7 (REST API - Backend) and Angular.js(Fronted)
+# Employees and Projects CRUD Application with ASP.NET Core 7 (REST API - Backend) and Angular.js(Frontend)
 
 ## A fully functional Employees and Projects CRUD Application written in ASP.NET Core 7 and Angular.js showing how to create employees and projects. 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.5(Frontend)
