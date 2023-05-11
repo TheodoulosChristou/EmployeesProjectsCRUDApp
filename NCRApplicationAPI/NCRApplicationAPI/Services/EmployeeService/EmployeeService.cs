@@ -1,4 +1,4 @@
-﻿using FluentAssertions.Common;
+using FluentAssertions.Common;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using NCRApplicationAPI.Data;

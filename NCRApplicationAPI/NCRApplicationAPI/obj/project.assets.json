@@ -3973,11 +3973,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\TC185212\\source\\repos\\NCRApplicationAPI\\NCRApplicationAPI\\NCRApplicationAPI.csproj",
+      "projectUniqueName": "C:\\Users\\TC185212\\OneDrive - NCR Corporation\\Desktop\\EmployeesProjectsCRUD\\EmployeesProjectsCRUDApp\\NCRApplicationAPI\\NCRApplicationAPI\\NCRApplicationAPI.csproj",
       "projectName": "NCRApplicationAPI",
-      "projectPath": "C:\\Users\\TC185212\\source\\repos\\NCRApplicationAPI\\NCRApplicationAPI\\NCRApplicationAPI.csproj",
+      "projectPath": "C:\\Users\\TC185212\\OneDrive - NCR Corporation\\Desktop\\EmployeesProjectsCRUD\\EmployeesProjectsCRUDApp\\NCRApplicationAPI\\NCRApplicationAPI\\NCRApplicationAPI.csproj",
       "packagesPath": "C:\\Users\\TC185212\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\TC185212\\source\\repos\\NCRApplicationAPI\\NCRApplicationAPI\\obj\\",
+      "outputPath": "C:\\Users\\TC185212\\OneDrive - NCR Corporation\\Desktop\\EmployeesProjectsCRUD\\EmployeesProjectsCRUDApp\\NCRApplicationAPI\\NCRApplicationAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\TC185212\\AppData\\Roaming\\NuGet\\NuGet.Config",

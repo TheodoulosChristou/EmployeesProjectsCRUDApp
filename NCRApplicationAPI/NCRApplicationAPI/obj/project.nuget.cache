@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ZD7xdOkj3AgkRR8FS82Fq2ib1tJbNVBzLA/bo7NhhDdFSkAE9GfJNCZi41CYNj1JHd1T3j2GQjjNK2rlJTKs7Q==",
+  "dgSpecHash": "LbxPTvUnTt8/+X9XytYrJ3I8OCB7QUgJWAbDxs86AJVf9L59PdTcR0H8qYYyN2+fhd5sebUEWFfJuk42Lb7RAw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\TC185212\\source\\repos\\NCRApplicationAPI\\NCRApplicationAPI\\NCRApplicationAPI.csproj",
+  "projectFilePath": "C:\\Users\\TC185212\\OneDrive - NCR Corporation\\Desktop\\EmployeesProjectsCRUD\\EmployeesProjectsCRUDApp\\NCRApplicationAPI\\NCRApplicationAPI\\NCRApplicationAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\TC185212\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\TC185212\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

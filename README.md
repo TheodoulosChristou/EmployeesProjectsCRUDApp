@@ -1,27 +1,42 @@
-# NCRApplication
+# Employees and Projects CRUD Application with ASP.NET Core 7 (REST API - Backend) and Angular.js(Fronted)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.5.
+## A fully functional Employees and Projects CRUD Application written in ASP.NET Core 7 and Angular.js showing how to create employees and projects. 
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.5(Frontend)
+and the (Backend) generated with [ASP.NET] Core in version .NET-7.
 
-## Development server
+This project shows how to create,read,update and delete projects and employees. Every part of this project is sample code which shows how to do the following:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+* Create FrontEnd and UI with [Angular.js] and [PrimeNg].
+* Create a simple Web API that serves Projects and Employees using [ASP.NET] 7.
+* Apply CRUD Operations to Employees.
+* Apply CRUD Operations to Projects.
+* Use Swagger to test all the CRUD operations for Employees and Projects.
 
-## Code scaffolding
+## How to install this Project
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Here is a short version of how this project works:
 
-## Build
+1. Clone this project.
+2. Download Node.js.
+3. Download Angular.js using Node.js .
+4. Download Visual Studio Code
+5. Open the project that you cloned in Visual Studio Code
+6. Run on Visual Studio Code Terminal `npm install`
+7. Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+8. Download Visual Studio 2022.
+9. Download .NET7
+10. Download SQL Server Management Studio 2019
+11. Open NCRApplicationAPI to Visual Studio 2022
+12. Run https on Visual Studio 2022.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## How to tweak this project for your own purposes
 
-## Running unit tests
+Since this is an example project, I would encourage you to clone and rename this project to use your own purposes. 
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Find a bug?
 
-## Running end-to-end tests
+If you found an issue or would like to submit an improvement to this project, please submit an issue using the issues tab above.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Known issues (Work in progress)
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+The project assignment has not been completed yet. This is coming soon !
